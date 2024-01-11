@@ -16,7 +16,24 @@
   align-items: center;
   padding: 0 100px;
 }
-
+.main_header_logo_h1 {
+  color: #1e1e1e;
+  font-family: Montserrat;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.main_header_menu_a {
+  color: #1e1e1e;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  padding-right: 30px;
+}
 .main_section {
   height: 500px;
   border: 1px solid blue;
