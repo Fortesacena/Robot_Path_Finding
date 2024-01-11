@@ -36,15 +36,15 @@
 }
 .main_section {
   height: 600px;
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url('../images/section.png'), rgb(3, 3, 112) 50% / cover no-repeat;    
 }
 
 .main_section_h1 {
-  /* color: #fff; */
+  color: #fff;
   font-family: Montserrat;
   font-size: 72px;
   font-style: normal;
@@ -56,7 +56,7 @@
 }
 
 .main_section_p{
-/* color: #FFF; */
+color: #FFF;
 text-align: center;
 font-family: Montserrat;
 font-size: 18px;
@@ -73,7 +73,7 @@ justify-content: flex-end;
 align-items: center;
 border-radius: 40px;
 padding-bottom: 20px;
-/* background: #FFF; */
+background: #FFF;
 }
 .main_section_button_a{
     color: #000;
