@@ -11,12 +11,43 @@
 body {
     font-family: Montserrat;
     color: white; 
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), 
-    url('/images/section.png') 50% / cover no-repeat,
-    rgb(3, 3, 112);
- 
+   
 }
-
+#content {
+	margin:0 auto;
+	width:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), 
+  url('/images/section.png') 50% / cover no-repeat,
+  rgb(3, 3, 112);
+}
+.main_header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+}
+.main_header_logo_h1 {
+  color: #1e1e1e;
+  font-family: Montserrat;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.main_header_menu_a {
+  color: #1e1e1e;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  padding-right: 30px;
+}
 
 .clearfix {
   zoom: 1;
@@ -75,13 +106,6 @@ option {
     margin:0 auto;
     white-space:pre;
     border:none;
-}
-#content {
-	margin:0 auto;
-	width:98%;
-  display:flex;
-  justify-content: center;
-  align-items: center;
 }
 
 ul.basics {
