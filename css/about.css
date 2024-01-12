@@ -1,3 +1,31 @@
+.main_header {
+    height: 100px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+  }
+  .main_header_logo_h1 {
+    color: #1e1e1e;
+    font-family: Montserrat;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .main_header_menu_a {
+    color: #1e1e1e;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    padding-right: 30px;
+  }
+
+
 .about1 {
     background-color: #161A30; 
     padding: 50px 0;
@@ -120,4 +148,60 @@ ard-body{
     align-items: center;
     text-align: center;
     display: flex;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+.about1,
+.problem-solvingtitle,
+.div1about,
+.div2about,
+.read-more-button,
+.card-body,
+.buttoncards,
+.quote,
+.btndiv {
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+.steps-section {
+    background-color: #f8f9fa; 
+    padding: 40px 0; 
+}
+
+.steps-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.steps-title {
+    text-align: center;
+    font-size: 40px;
+    color: #161A30; 
+    margin-bottom: 30px;
+    font-weight:700;
+}
+
+.step {
+    margin-bottom: 20px;
+}
+
+.step-number {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #161A30; 
+    color: #fff; 
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 15px;
+    
+}
+
+.step-text {
+    font-size: 18px;
+    color: #495057;
 }
