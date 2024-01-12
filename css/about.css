@@ -54,7 +54,8 @@
 }
 .cardsdiv{
     padding: 50px;
-    background-image: url(about2.png);
+    background-image: url(../images/section.png);
+    background-size: cover;
     background-color:#161A30;
     justify-content: space-around;
 
