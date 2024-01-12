@@ -134,4 +134,46 @@ body {
 .quote,
 .btndiv {
     font-family: 'Montserrat', sans-serif;
+
+
+}
+.steps-section {
+    background-color: #f8f9fa; 
+    padding: 40px 0; 
+}
+
+.steps-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.steps-title {
+    text-align: center;
+    font-size: 40px;
+    color: #161A30; 
+    margin-bottom: 30px;
+    font-weight:700;
+}
+
+.step {
+    margin-bottom: 20px;
+}
+
+.step-number {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #161A30; 
+    color: #fff; 
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 15px;
+    
+}
+
+.step-text {
+    font-size: 18px;
+    color: #495057;
 }
