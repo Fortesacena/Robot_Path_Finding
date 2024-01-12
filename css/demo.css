@@ -22,6 +22,7 @@ body {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), 
   url('/images/section.png') 50% / cover no-repeat,
   rgb(3, 3, 112);
+  background-color: #161a30;
 }
 .main_header {
   height: 100px;
@@ -639,4 +640,14 @@ button.btn.small, input[type="submit"].btn.small {
     color: black;
     font-size: 20px;
 
+}
+@media screen and (max-width: 768px) {
+  #controls {
+      width: 100%;
+      margin-bottom: 10px; /* Add space between the form and the map on smaller screens */
+  }
+
+  #search_grid {
+      width: 100%;
+  }
 }
