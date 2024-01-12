@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 	<title>Demo - JavaScript A* Search Algorithm</title>
-	<link rel="stylesheet" type="text/css" media="screen, projection" href="demo.css" />
+	<link rel="stylesheet" type="text/css" media="screen, projection" href="/css/demo.css" />
 </head>
 
 <body>
@@ -42,14 +42,42 @@
 			<label for="searchDiagonal">Allow diagonal movement?</label>
 			<input type="checkbox" name="searchDiagonal" id="searchDiagonal" />
 			<br />
-			<div class="btndiv">
-				<input type="button" class="buttoncards" id="btnGenerate" value="Generate New Map" />
-			 </div>
+			<input type="button" id="btnGenerate" value="Generate New Map" /><br>
 			<span id="message">Click on a grid position to search</span>
+		</div>
+		<fieldset id='weightsKey'>
+			<legend>Key:</legend>
+			<div>
+				<span class="grid_item weight1" style="width: 14.25px; height: 14.25px; margin-right: 6px;"
+					id="keyWeight3"></span> Weight of 1
+			</div>
+			<div>
+				<span class="grid_item weight3" style="width: 14.25px; height: 14.25px; margin-right: 6px;"
+					id="keyWeight3"></span> Weight of 3
+			</div>
+			<div>
+				<span class="grid_item weight5" style="width: 14.25px; height: 14.25px; margin-right: 6px;"
+					id="keyWeight3"></span> Weight of 5
+			</div>
+			<div>
+				<span class="grid_item wall" style="width: 14.25px; height: 14.25px; margin-right: 6px;"
+					id="keyWall"></span> Wall (imapassable)
+			</div>
+		</fieldset>
+		<br />
+		<span id="message">Click on a grid position to search</span>
 	</div>
 
 	<div id="main">
-		
+		<div id="search_grid">Loading grid...</div>
+	</div>
+
+	</div>
+	<span id="message">Click on a grid position to search</span>
+	</div>
+
+	<div id="main">
+		<div id="search_grid">Loading grid...</div>
 	</div>
 
 	</div>
