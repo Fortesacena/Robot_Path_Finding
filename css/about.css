@@ -1,0 +1,50 @@
+.about1 {
+    background-color: #161A30; 
+    padding: 50px 0;
+}
+
+
+
+.problem-solvingtitle img {
+    margin-right: 15px;
+}
+
+.problem-solvingtitle h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.about1divs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.div1about {
+    margin-bottom: 50px;
+    background-color: #3c3f58; /* Darker background color */
+    color: #fff; /* White text color */
+    padding: 20px; /* Increased padding for better spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle elevation effect */
+}
+
+.div1about p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.div2about img {
+    width: 100%;
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle elevation effect */
+}
+.read-more-button{
+    border:2px solid #161A30;
+    background-color: #161A30;
+    padding: 10px;
+    color: white;
+}
