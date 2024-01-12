@@ -121,3 +121,17 @@ ard-body{
     text-align: center;
     display: flex;
 }
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+.about1,
+.problem-solvingtitle,
+.div1about,
+.div2about,
+.read-more-button,
+.card-body,
+.buttoncards,
+.quote,
+.btndiv {
+    font-family: 'Montserrat', sans-serif;
+}
