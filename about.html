@@ -4,59 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="./css/about.css" rel="stylesheet">
-    <body>
-        <div class="about1">
-            <div class="div1">
-                <p class="text1">Welcome to our About page, where the journey into the world of Robot Path Planning unfolds. Here, we are passionate about leveraging the cutting-edge A* star algorithm to empower robots with intelligent and efficient pathfinding capabilities. Our commitment is to explore, innovate, and share insights that drive advancements in the exciting field of robotics. Join us as we navigate through the intricacies of A* star, shaping the future of autonomous exploration and intelligent decision-making for robots.
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="about1.css">
+    <link rel="stylesheet" href="steps.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
     
-                </p>
+<div class="conatiner-fluid">
+    <div class="about1">
+        <div class="container">
+            <div class="problem-solvingtitle">
+                <img src="../images/Line 1 (1).png" alt="Icon">
+                <h2>Description</h2>
             </div>
-            <div class="div2">
-                <p class="text2">text</p>
-            </div>
-        </div>
-        <div class="aboutdivs">
-            <div class="background-div">
-                <div class="div3">
-                    <h1>A* in Real-Life Navigation</h1>
-                    <img src="Line 1 (1).png">
-                    <br>
-                    <br>
-                    <p>Embark on a journey of seamless navigation with the A* algorithm,
-                        a dynamic tool transforming real-life mapping and exploration. A*
-                        excels in finding optimal routes, making it indispensable for applications
-                        like GPS navigation, robotic exploration, and
-                        automated vehicles. Its adaptability and efficiency shine in intricate environments,
-                        ensuring smooth and precise pathfinding.
-
+            <div class="row about1divs">
+                <div class="col-md-6 div1about">
+                    <p>
+                        A* is an informed search algorithm, or a best-first search, meaning that
+                         it is formulated in terms of weighted graphs: starting from a specific starting node of a 
+                         graph, it aims to find a path to the given goal node having the smallest cost (least distance travelled, 
+                         shortest time, etc.). It does this by maintaining a tree of paths originating at the start node and extending
+                          those paths one edge at a time until the goal node is reached.
+                        At each iteration of its main loop, A* needs to determine which of its paths to extend. It does so based on 
+                        the cost of the path and an estimate of the cost required to extend the path all the way to the goal. Specifically, 
+                        A* selects the path that minimizes <br>
+                         <b>f(n)=g(n)+h(n)</b>
+                        
                     </p>
-                    <br><br>
-                    <button class="butoniabout" data-toggle="modal" data-target="#modal1">Read more</button>
+                    <p class="additional-content" style="display: none;">
+                        
+                        where n is the next node on the path, g(n) is the cost of the path from the start node to n, and h(n) is a heuristic function that estimates the cost of the cheapest path from n to the goal. The heuristic function is problem-specific. If the heuristic function is admissible – meaning that it never overestimates
+                         the actual cost to get to the goal – A* is guaranteed to return a least-cost path from start to goal.</p>
+                    <button class="read-more-button" onclick="showAdditionalContent()">Read More</button>
                 </div>
-
-            </div>
-
-            <div class="background-div">
-                <div class="div4">
-                    <h1> A* algorithm in network routing</h1>
-                    <img src="Line 1 (1).png">
-                    <br>
-                    <br>
-                    <p>In the realm of networking, the A* algorithm emerges as a key player
-                        in optimizing data routing. Employed in telecommunications, internet
-                        infrastructure, and various networked systems, A* plays a pivotal role in
-                        ensuring efficient data transmission. By navigating the intricate web of interconnected
-                        nodes and pathways, A* determines the optimal routes, minimizing latency, and enhancing the
-                        overall performance of networked communication.
-
-                    </p>
-                    <button class="butoniabout" href="#modal2">Read more</button>
+                <div class="col-md-6 div2about">
+                    <img src="../images/Astarpathfinding.gif" alt="A* Pathfinding Animation">
                 </div>
             </div>
         </div>
     </div>
-    </body>
-    </html>
-
-</head>
+</div>
+<script src="./scripts/about.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+</body>
+</html>
