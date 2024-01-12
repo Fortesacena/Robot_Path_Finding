@@ -145,14 +145,15 @@
 }
 
 /*mobile responsive*/
-/*Iphone SE*/
-@media screen and (max-width:375px){
+@media screen and (max-width:430px){
   
 .main_header {
   height: auto;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 10px;
+
 }
 .main_header_menu{
   display: flex;
@@ -162,18 +163,25 @@
 }
 
   .main_section {
-    height: 600px;
+    height: 500px;
     width: 100%;
   }
 
   .main_section_h1 {
     font-size: 20px;
     text-align: center;
-    width: 300px;
+    width: 100%;
+    padding: 10px
   }
 
   .main_section_p {
     font-size: 14px;
-    width: 300px;
+    width: 100%;
+    padding: 10px;
+  }
+  .main_section_button_a {
+    text-align: center;
+    font-size: 18px;
+
   }
 }
