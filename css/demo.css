@@ -640,3 +640,13 @@ button.btn.small, input[type="submit"].btn.small {
     font-size: 20px;
 
 }
+@media screen and (max-width: 768px) {
+  #controls {
+      width: 100%;
+      margin-bottom: 10px; /* Add space between the form and the map on smaller screens */
+  }
+
+  #search_grid {
+      width: 100%;
+  }
+}
