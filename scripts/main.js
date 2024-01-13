@@ -10,3 +10,13 @@
     window.Graph = exports.Graph;
   }
 });
+
+function pathTo(node) {
+  var curr = node;
+  var path = [];
+  while (curr.parent) {
+    path.unshift(curr);
+    curr = curr.parent;
+  }
+  return path;
+}
