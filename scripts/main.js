@@ -116,7 +116,28 @@
       // No result was found - empty array signifies failure to find path.
       return [];
     },
-    
+  heuristics: {
+      manhattan: function(pos0, pos1) {
+        var d1 = Math.abs(pos1.x - pos0.x);
+        var d2 = Math.abs(pos1.y - pos0.y);
+        return d1 + d2;
+      },
+      diagonal: function(pos0, pos1) {
+        var D = 1;
+        var D2 = Math.sqrt(2);
+        var d1 = Math.abs(pos1.x - pos0.x);
+        var d2 = Math.abs(pos1.y - pos0.y);
+        return (D * (d1 + d2)) + ((D2 - (2 * D)) * Math.min(d1, d2));
+      }
+    },
+    cleanNode: function(node) {
+      node.f = 0;
+      node.g = 0;
+      node.h = 0;
+      node.visited = false;
+      node.closed = false;
+      node.parent = null;
+    }    
+};
+
 });
-
-
