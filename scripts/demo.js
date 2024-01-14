@@ -102,4 +102,12 @@ GraphSearch.prototype.initialize = function() {
             this.grid.push(gridRow);
             nodes.push(nodeRow);
         }
+        
+        this.graph = new Graph(nodes);
+
+        // bind cell event, set start/wall positions
+        this.$cells = $graph.find(".grid_item");
+        this.$cells.click(function() {
+            self.cellClicked($(this));
+        });
 };
