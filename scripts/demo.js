@@ -17,3 +17,5 @@ $(function() {
         diagonal: $searchDiagonal.is("checked"),
         closest: $checkClosest.is("checked")
     };
+
+    
