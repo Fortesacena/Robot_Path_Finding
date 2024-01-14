@@ -66,39 +66,4 @@ GraphSearch.prototype.initialize = function() {
         cellHeight = ($graph.height()/this.opts.gridSize)-2,
         $cellTemplate = $("<span />").addClass("grid_item").width(cellWidth).height(cellHeight),
         startSet = false;
-        for(var x = 0; x < this.opts.gridSize; x++) {
-            var $row = $("<div class='clear' />"),
-                nodeRow = [],
-                gridRow = [];
 
-            for(var y = 0; y < this.opts.gridSize; y++) {
-                var id = "cell_"+x+"_"+y,
-                    $cell = $cellTemplate.clone();
-                $cell.attr("id", id).attr("x", x).attr("y", y);
-                $row.append($cell);
-                gridRow.push($cell);
-
-                var isWall = Math.floor(Math.random()*(1/self.opts.wallFrequency));
-                if(isWall === 0) {
-                    nodeRow.push(WALL);
-                    $cell.addClass(css.wall);
-                }
-                else  {
-                    var cell_weight = ($("#generateWeights").prop("checked") ? (Math.floor(Math.random() * 3)) * 2 + 1 : 1);
-                    nodeRow.push(cell_weight);
-                    $cell.addClass('weight' + cell_weight);
-                    if ($("#displayWeights").prop("checked")) {
-                        $cell.html(cell_weight);
-                    }
-                    if (!startSet) {
-                        $cell.addClass(css.start);
-                        startSet = true;
-                    }
-                }
-            }
-            $graph.append($row);
-
-            this.grid.push(gridRow);
-            nodes.push(nodeRow);
-        }
-};
