@@ -31,3 +31,16 @@ $(function() {
 
    
 });
+
+var css = { start: "start", finish: "finish", wall: "wall", active: "active" };
+
+function GraphSearch($graph, options, implementation) {
+    this.$graph = $graph;
+    this.search = implementation;
+    this.opts = $.extend({wallFrequency:0.1, debug:true, gridSize:10}, options);
+    this.initialize();
+}
+GraphSearch.prototype.setOption = function(opt) {
+    this.opts = $.extend(this.opts, opt);
+    this.drawDebugInfo();
+};
