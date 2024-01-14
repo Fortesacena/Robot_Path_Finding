@@ -141,6 +141,46 @@
     },
   };
 
+  /**
+   * A graph memory structure
+   * @param {Array} gridIn 2D array of input weights
+   * @param {Object} [options]
+   * @param {bool} [options.diagonal] Specifies whether diagonal moves are allowed
+   */
+  function Graph(gridIn, options) {
+    options = options || {};
+    this.nodes = [];
+    this.diagonal = !!options.diagonal;
+    this.grid = [];
+    for (var x = 0; x < gridIn.length; x++) {
+      this.grid[x] = [];
+
+      for (var y = 0, row = gridIn[x]; y < row.length; y++) {
+        var node = new GridNode(x, y, row[y]);
+        this.grid[x][y] = node;
+        this.nodes.push(node);
+      }
+    }
+    this.init();
+  }
+
+  Graph.prototype.init = function () {
+    this.dirtyNodes = [];
+    for (var i = 0; i < this.nodes.length; i++) {
+      astar.cleanNode(this.nodes[i]);
+    }
+  };
+
+  Graph.prototype.cleanDirty = function () {
+    for (var i = 0; i < this.dirtyNodes.length; i++) {
+      astar.cleanNode(this.dirtyNodes[i]);
+    }
+    this.dirtyNodes = [];
+  };
+
+  Graph.prototype.markDirty = function (node) {
+    this.dirtyNodes.push(node);
+  };
   //to do other things
 
   //gridnode task
