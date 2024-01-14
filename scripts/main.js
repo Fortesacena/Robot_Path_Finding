@@ -340,4 +340,56 @@
         }
       }
     },
+    bubbleUp: function(n) {
+      // Look up the target element and its score.
+      var length = this.content.length;
+      var element = this.content[n];
+      var elemScore = this.scoreFunction(element);
+  
+      while (true) {
+        // Compute the indices of the child elements.
+        var child2N = (n + 1) << 1;
+        var child1N = child2N - 1;
+        // This is used to store the new position of the element, if any.
+        var swap = null;
+        var child1Score;
+        // If the first child exists (is inside the array)...
+        if (child1N < length) {
+          // Look it up and compute its score.
+          var child1 = this.content[child1N];
+          child1Score = this.scoreFunction(child1);
+  
+          // If the score is less than our element's, we need to swap.
+          if (child1Score < elemScore) {
+            swap = child1N;
+          }
+        }
+  
+        // Do the same checks for the other child.
+        if (child2N < length) {
+          var child2 = this.content[child2N];
+          var child2Score = this.scoreFunction(child2);
+          if (child2Score < (swap === null ? elemScore : child1Score)) {
+            swap = child2N;
+          }
+        }
+  
+        // If the element needs to be moved, swap it, and continue.
+        if (swap !== null) {
+          this.content[n] = this.content[swap];
+          this.content[swap] = element;
+          n = swap;
+        }
+        // Otherwise, we are done.
+        else {
+          break;
+        }
+      }
+    }
+  };
+  
+  return {
+    astar: astar,
+    Graph: Graph
+  };
 });
