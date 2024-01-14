@@ -66,5 +66,4 @@ GraphSearch.prototype.initialize = function() {
         cellHeight = ($graph.height()/this.opts.gridSize)-2,
         $cellTemplate = $("<span />").addClass("grid_item").width(cellWidth).height(cellHeight),
         startSet = false;
-        for(var x = 0; x < this.opts.gridSize; x++) {}
-}
+
