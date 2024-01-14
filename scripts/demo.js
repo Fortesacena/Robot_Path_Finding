@@ -16,3 +16,18 @@ $(function() {
         debug: $checkDebug.is("checked"),
         diagonal: $searchDiagonal.is("checked"),
         closest: $checkClosest.is("checked")
+    };
+
+    var grid = new GraphSearch($grid, opts, astar.search);
+
+    $("#btnGenerate").click(function() {
+        grid.initialize();
+    });
+
+    $selectGridSize.change(function() {
+        grid.setOption({gridSize: $(this).val()});
+        grid.initialize();
+    });
+
+   
+});
