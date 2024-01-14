@@ -181,7 +181,70 @@
   Graph.prototype.markDirty = function (node) {
     this.dirtyNodes.push(node);
   };
-  //to do other things
+  Graph.prototype.neighbors = function(node) {
+    var ret = [];
+    var x = node.x;
+    var y = node.y;
+    var grid = this.grid;
+  
+    // West
+    if (grid[x - 1] && grid[x - 1][y]) {
+      ret.push(grid[x - 1][y]);
+    }
+  
+    // East
+    if (grid[x + 1] && grid[x + 1][y]) {
+      ret.push(grid[x + 1][y]);
+    }
+  
+    // South
+    if (grid[x] && grid[x][y - 1]) {
+      ret.push(grid[x][y - 1]);
+    }
+  
+    // North
+    if (grid[x] && grid[x][y + 1]) {
+      ret.push(grid[x][y + 1]);
+    }
+  
+    if (this.diagonal) {
+      // Southwest
+      if (grid[x - 1] && grid[x - 1][y - 1]) {
+        ret.push(grid[x - 1][y - 1]);
+      }
+  
+      // Southeast
+      if (grid[x + 1] && grid[x + 1][y - 1]) {
+        ret.push(grid[x + 1][y - 1]);
+      }
+  
+      // Northwest
+      if (grid[x - 1] && grid[x - 1][y + 1]) {
+        ret.push(grid[x - 1][y + 1]);
+      }
+  
+      // Northeast
+      if (grid[x + 1] && grid[x + 1][y + 1]) {
+        ret.push(grid[x + 1][y + 1]);
+      }
+    }
+  
+    return ret;
+  };
+  
+  Graph.prototype.toString = function() {
+    var graphString = [];
+    var nodes = this.grid;
+    for (var x = 0; x < nodes.length; x++) {
+      var rowDebug = [];
+      var row = nodes[x];
+      for (var y = 0; y < row.length; y++) {
+        rowDebug.push(row[y].weight);
+      }
+      graphString.push(rowDebug.join(" "));
+    }
+    return graphString.join("\n");
+  };
 
   //gridnode task
   function GridNode(x, y, weight) {
