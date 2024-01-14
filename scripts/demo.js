@@ -28,6 +28,15 @@ $(function() {
         grid.setOption({gridSize: $(this).val()});
         grid.initialize();
     });
+    $checkDebug.change(function() {
+        grid.setOption({debug: $(this).is(":checked")});
+    });
+
+    $searchDiagonal.change(function() {
+        var val = $(this).is(":checked");
+        grid.setOption({diagonal: val});
+        grid.graph.diagonal = val;
+    });
 
    
 });
