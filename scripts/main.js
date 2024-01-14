@@ -268,4 +268,76 @@
   GridNode.prototype.isWall = function () {
     return this.weight === 0;
   };
+  function BinaryHeap(scoreFunction) {
+    this.content = [];
+    this.scoreFunction = scoreFunction;
+  }
+  
+  BinaryHeap.prototype = {
+    push: function(element) {
+      // Add the new element to the end of the array.
+      this.content.push(element);
+  
+      // Allow it to sink down.
+      this.sinkDown(this.content.length - 1);
+    },
+    pop: function() {
+      // Store the first element so we can return it later.
+      var result = this.content[0];
+      // Get the element at the end of the array.
+      var end = this.content.pop();
+      // If there are any elements left, put the end element at the
+      // start, and let it bubble up.
+      if (this.content.length > 0) {
+        this.content[0] = end;
+        this.bubbleUp(0);
+      }
+      return result;
+    },
+    remove: function(node) {
+      var i = this.content.indexOf(node);
+  
+      // When it is found, the process seen in 'pop' is repeated
+      // to fill up the hole.
+      var end = this.content.pop();
+  
+      if (i !== this.content.length - 1) {
+        this.content[i] = end;
+  
+        if (this.scoreFunction(end) < this.scoreFunction(node)) {
+          this.sinkDown(i);
+        } else {
+          this.bubbleUp(i);
+        }
+      }
+    },
+    size: function() {
+      return this.content.length;
+    },
+    rescoreElement: function(node) {
+      this.sinkDown(this.content.indexOf(node));
+    },
+    sinkDown: function(n) {
+      // Fetch the element that has to be sunk.
+      var element = this.content[n];
+  
+      // When at 0, an element can not sink any further.
+      while (n > 0) {
+  
+        // Compute the parent element's index, and fetch it.
+        var parentN = ((n + 1) >> 1) - 1;
+        var parent = this.content[parentN];
+        // Swap the elements if the parent is greater.
+        if (this.scoreFunction(element) < this.scoreFunction(parent)) {
+          this.content[parentN] = element;
+          this.content[n] = parent;
+          // Update 'n' to continue at the new position.
+          n = parentN;
+        }
+        // Found a parent that is less, no need to sink any further.
+        else {
+          break;
+        }
+      }
+    },
 });
