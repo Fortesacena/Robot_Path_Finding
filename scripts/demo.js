@@ -16,4 +16,3 @@ $(function() {
         debug: $checkDebug.is("checked"),
         diagonal: $searchDiagonal.is("checked"),
         closest: $checkClosest.is("checked")
-    };
