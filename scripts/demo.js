@@ -53,3 +53,17 @@ GraphSearch.prototype.setOption = function(opt) {
     this.opts = $.extend(this.opts, opt);
     this.drawDebugInfo();
 };
+
+GraphSearch.prototype.initialize = function() {
+    this.grid = [];
+    var self = this,
+        nodes = [],
+        $graph = this.$graph;
+
+    $graph.empty();
+
+    var cellWidth = ($graph.width()/this.opts.gridSize)-2,  // -2 for border
+        cellHeight = ($graph.height()/this.opts.gridSize)-2,
+        $cellTemplate = $("<span />").addClass("grid_item").width(cellWidth).height(cellHeight),
+        startSet = false;
+}
