@@ -141,6 +141,7 @@ GraphSearch.prototype.cellClicked = function($end) {
         this.drawDebugInfo();
         this.animatePath(path);
     }
+};
 
 GraphSearch.prototype.drawDebugInfo = function() {
     this.$cells.empty(); // Clear contents for better updates
