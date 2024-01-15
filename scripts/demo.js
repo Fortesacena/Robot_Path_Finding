@@ -179,3 +179,10 @@ GraphSearch.prototype.animateNoPath = function() {
     };
     jiggle(15);
 };
+
+GraphSearch.prototype.animatePath = function(path) {
+    var grid = this.grid,
+        timeout = 1000 / grid.length,
+        elementFromNode = function(node) {
+        return grid[node.x][node.y];
+    };
