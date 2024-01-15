@@ -111,9 +111,6 @@ GraphSearch.prototype.initialize = function() {
             self.cellClicked($(this));
         });
 };
-<<<<<<< Updated upstream
-=======
-
 GraphSearch.prototype.cellClicked = function($end) {
 
     var end = this.nodeFromElement($end);
@@ -144,8 +141,6 @@ GraphSearch.prototype.cellClicked = function($end) {
         this.drawDebugInfo();
         this.animatePath(path);
     }
-};
->>>>>>> Stashed changes
 
 GraphSearch.prototype.drawDebugInfo = function() {
     this.$cells.empty(); // Clear contents for better updates
@@ -164,4 +159,6 @@ GraphSearch.prototype.drawDebugInfo = function() {
             }
         });
     }
+=======
+
 };
