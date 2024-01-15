@@ -186,3 +186,35 @@ GraphSearch.prototype.animatePath = function(path) {
         elementFromNode = function(node) {
         return grid[node.x][node.y];
     };
+
+    var self = this;
+    // will add start class if final
+    var removeClass = function(path, i) {
+        if(i >= path.length) { // finished removing path, set start positions
+            return setStartClass(path, i);
+        }
+        elementFromNode(path[i]).removeClass(css.active);
+        setTimeout(function() {
+            removeClass(path, i+1);
+        }, timeout*path[i].getCost());
+    };
+    var setStartClass = function(path, i) {
+        if(i === path.length) {
+            self.$graph.find("." + css.start).removeClass(css.start);
+            elementFromNode(path[i-1]).addClass(css.start);
+        }
+    };
+    var addClass = function(path, i) {
+        if(i >= path.length) { // Finished showing path, now remove
+            return removeClass(path, 0);
+        }
+        elementFromNode(path[i]).addClass(css.active);
+        setTimeout(function() {
+            addClass(path, i+1);
+        }, timeout*path[i].getCost());
+    };
+
+    addClass(path, 0);
+    this.$graph.find("." + css.start).removeClass(css.start);
+    this.$graph.find("." + css.finish).removeClass(css.finish).addClass(css.start);
+};
