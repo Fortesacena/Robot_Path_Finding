@@ -111,3 +111,56 @@ GraphSearch.prototype.initialize = function() {
             self.cellClicked($(this));
         });
 };
+<<<<<<< Updated upstream
+=======
+
+GraphSearch.prototype.cellClicked = function($end) {
+
+    var end = this.nodeFromElement($end);
+
+    if($end.hasClass(css.wall) || $end.hasClass(css.start)) {
+        return;
+    }
+
+    this.$cells.removeClass(css.finish);
+    $end.addClass("finish");
+    var $start = this.$cells.filter("." + css.start),
+        start = this.nodeFromElement($start);
+
+    var sTime = performance ? performance.now() : new Date().getTime();
+
+    var path = this.search(this.graph, start, end, {
+        closest: this.opts.closest
+    });
+    var fTime = performance ? performance.now() : new Date().getTime(),
+        duration = (fTime-sTime).toFixed(2);
+
+    if(path.length === 0) {
+        $("#message").text("couldn't find a path (" + duration + "ms)");
+        this.animateNoPath();
+    else {
+        $("#message").text("search took " + duration + "ms.");
+        this.drawDebugInfo();
+        this.animatePath(path);
+    }
+};
+>>>>>>> Stashed changes
+
+GraphSearch.prototype.drawDebugInfo = function() {
+    this.$cells.empty(); // Clear contents for better updates
+    var that = this;
+    if (this.opts.debug) {
+        that.$cells.each(function() {
+            var node = that.nodeFromElement($(this)),
+                debugInfo = "";
+
+            if (node.visited) {
+                debugInfo = "F: " + node.f + "<br />G: " + node.g + "<br />H: " + node.h;
+            }
+
+            if (debugInfo) {
+                $(this).html(debugInfo);
+            }
+        });
+    }
+};
