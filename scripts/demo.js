@@ -159,6 +159,9 @@ GraphSearch.prototype.drawDebugInfo = function() {
             }
         });
     }
-=======
 
+};
+
+GraphSearch.prototype.nodeFromElement = function($cell) {
+    return this.graph.grid[parseInt($cell.attr("x"))][parseInt($cell.attr("y"))];
 };
