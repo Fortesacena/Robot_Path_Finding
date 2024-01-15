@@ -165,3 +165,17 @@ GraphSearch.prototype.drawDebugInfo = function() {
 GraphSearch.prototype.nodeFromElement = function($cell) {
     return this.graph.grid[parseInt($cell.attr("x"))][parseInt($cell.attr("y"))];
 };
+
+GraphSearch.prototype.animateNoPath = function() {
+    var $graph = this.$graph;
+    var jiggle = function(lim, i) {
+        if(i>=lim) { $graph.css("top", 0).css("left", 0); return; }
+        if(!i) i=0;
+        i++;
+        $graph.css("top", Math.random()*6).css("left", Math.random()*6);
+        setTimeout(function() {
+            jiggle(lim, i);
+        }, 5);
+    };
+    jiggle(15);
+};
