@@ -138,6 +138,7 @@ GraphSearch.prototype.cellClicked = function($end) {
     if(path.length === 0) {
         $("#message").text("couldn't find a path (" + duration + "ms)");
         this.animateNoPath();
+    }
     else {
         $("#message").text("search took " + duration + "ms.");
         this.drawDebugInfo();
