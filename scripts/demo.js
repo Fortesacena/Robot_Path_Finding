@@ -111,7 +111,6 @@ GraphSearch.prototype.initialize = function() {
             self.cellClicked($(this));
         });
 };
-
 GraphSearch.prototype.cellClicked = function($end) {
 
     var end = this.nodeFromElement($end);
@@ -142,4 +141,24 @@ GraphSearch.prototype.cellClicked = function($end) {
         this.drawDebugInfo();
         this.animatePath(path);
     }
+
+GraphSearch.prototype.drawDebugInfo = function() {
+    this.$cells.empty(); // Clear contents for better updates
+    var that = this;
+    if (this.opts.debug) {
+        that.$cells.each(function() {
+            var node = that.nodeFromElement($(this)),
+                debugInfo = "";
+
+            if (node.visited) {
+                debugInfo = "F: " + node.f + "<br />G: " + node.g + "<br />H: " + node.h;
+            }
+
+            if (debugInfo) {
+                $(this).html(debugInfo);
+            }
+        });
+    }
+=======
+
 };
