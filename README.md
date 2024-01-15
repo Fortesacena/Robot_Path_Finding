@@ -1,9 +1,9 @@
-## Robot_Path_Finding
+# Robot_Path_Finding
 
-# Project Overview
+## Project Overview
 This repository is dedicated to a school project focused on understanding and implementing the A* Search algorithm for robot pathfinding in a game scenario. The project aims to simulate a real-world work environment, with team members assigned specific roles to enhance collaboration and mimic industry practices.
 
-# Team Roles
+## Team Roles
 Technical Team Leader: Fortesa Cena
 Backend Leader: Ylljetë Kicaj
 Frontend Leader: Vijola Neziri
@@ -12,13 +12,13 @@ DevOps: [Name]
 Project Methodology
 The project adopts an agile approach, specifically utilizing the Scrum framework. The team collaborates using Jira software, where tasks are organized, tracked, and managed. Each team member has specific responsibilities assigned through the Scrum template on Jira.
 
-# Jira Board
+## Jira Board
 To view and track our project progress, please visit our Jira board: https://robotpathfinding.atlassian.net/jira/software/projects/RPP/boards/1/backlog
 
-# Deployment
+## Deployment
 The application is deployed and can be accessed through the following link: [Deployed App Link]
 
-# Problem Description
+## Problem Description
 The task involves solving the path planning problem for a robot navigating through obstacles in a given environment. The problem statement includes:
 
 Given:
@@ -29,19 +29,19 @@ An end point.
 Objective:
 Plan a path for a robot to move from the start point to the end point while avoiding the obstacles.
 
-# Requirements
+## Requirements
 The application is designed to meet the following requirements:
 
 Scalability: It should handle varying numbers of obstacles and complexities of the environment.
 Feasibility: The program should be able to find a feasible path for any given set of obstacles and start and end points.
 
-# Algorithm
+## Algorithm
 The implemented algorithm for solving the path planning problem is the A* Search Algorithm. This algorithm efficiently finds the shortest path from the start point to the end point while considering the obstacles in the environment.
 
-# Implementation
+## Implementation
 The application is implemented using JavaScript. The source code is organized to handle the input of obstacles, start and end points, and to output a feasible path for the robot.
 
-# Usage
+## Usage
 To use the application, follow these steps:
 
 Ensure you have Node.js installed on your machine.
