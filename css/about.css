@@ -1,5 +1,6 @@
 .main_header {
     height: 100px;
+   
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,8 +23,12 @@
     line-height: normal;
     text-decoration: none;
     padding-right: 30px;
-   
   }
+    .main_header_menu_a:hover {
+        text-decoration: none; 
+        color: #1e1e1e;
+    }
+
 
 
 .about1 {
@@ -204,4 +209,23 @@ body {
 .step-text {
     font-size: 18px;
     color: #495057;
+}
+
+.footer {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.social-icons img {
+    width: 30px; /* Adjust the size of social icons */
+    margin: 0 5px; /* Adjust the spacing between icons */
+}
+.black-icon {
+    color: black;
 }
