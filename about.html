@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About page</title>
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="conatiner-fluid">
+        <div class="header">
+            <div class="main_header">
+                <div class="main_header_logo">
+                    <h1 class="main_header_logo_h1">Robot Path Planning</h1>
+                </div>
+                <div class="main_header_menu">
+                    <a class="main_header_menu_a" href="./index.html">Home</a>
+                    <a class="main_header_menu_a" href="./about.html">About</a>
+                    <a class="main_header_menu_a" href="./demo.html">Start</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="about1">
+            <div class="container">
+                <div class="problem-solvingtitle">
+                    <img src="./images/Line 1 (1).png" alt="Icon">
+                    <h2>Description</h2>
+
+                </div>
+                <div class="row about1divs">
+                    <div class="col-md-6 div1about">
+                        <p>
+                            A* is an informed search algorithm, or a best-first search, meaning that
+                            it is formulated in terms of weighted graphs: starting from a specific starting node of a
+                            graph, it aims to find a path to the given goal node having the smallest cost (least
+                            distance travelled,
+                            shortest time, etc.). It does this by maintaining a tree of paths originating at the start
+                            node and extending
+                            those paths one edge at a time until the goal node is reached.
+                            At each iteration of its main loop, A* needs to determine which of its paths to extend. It
+                            does so based on
+                            the cost of the path and an estimate of the cost required to extend the path all the way to
+                            the goal. Specifically,
+                            A* selects the path that minimizes <br>
+                            <b>f(n)=g(n)+h(n)</b>
+
+                        </p>
+                        <p class="additional-content" style="display: none;">
+
+                            where n is the next node on the path, g(n) is the cost of the path from the start node to n,
+                            and h(n) is a heuristic function that estimates the cost of the cheapest path from n to the
+                            goal. The heuristic function is problem-specific. If the heuristic function is admissible –
+                            meaning that it never overestimates
+                            the actual cost to get to the goal – A* is guaranteed to return a least-cost path from start
+                            to goal.</p>
+                        <button class="read-more-button" onclick="showAdditionalContent()">Read More</button>
+                    </div>
+                    <div class="col-md-6 div2about">
+                        <img src="./images/Astarpathfinding.gif" alt="A* Pathfinding Animation">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cardsdiv">
+            <div class="container">
+                <div class="problem-solvingtitle">
+                    <img src="./images/Line 1 (1).png" alt="Icon">
+                    <h2>Problem Solving</h2>
+                </div>
+
+                <div class="row rowcards">
+                    <div class="card custom-card" style="width: 20rem;height:600px;">
+                        <img src="./images/A__Search_Example_on_North_American_Freight_Train_Network.gif"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">The A* algorithm has real-world applications. In this example, edges
+                                are railroads and h(x) is the
+                                great-circle distance (the shortest possible distance on a sphere) to the target. The
+                                algorithm
+                                is searching for a path between Washington, D.C., and Los Angeles.</p>
+                            <div class="btndiv">
+                                <button class="buttoncards" data-toggle="modal" data-target="#modal1">Read More</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card custom-card" style="width: 20rem;height:600px;">
+                        <img src="./images/Astar_progress_animation.gif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Illustrating the A* search algorithm in a robot motion planning problem involves
+                                dynamically navigating a graph
+                                representation of the environment, efficiently determining the optimal path from a start
+                                node to a goal node through a heuristic-driven exploration.</p>
+                            <div class="btndiv">
+                                <button class="buttoncards" data-toggle="modal" data-target="#modal2">Read More</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card custom-card" style="width: 20rem;height:600px;">
+                        <img src="./images/AstarExampleEn.gif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">An example of an A* algorithm in action where nodes are cities
+                                connected with roads and h(x) is the straight-line distance to the target point:</p>
+
+                            <b>Key:</b><a>green: start; blue: goal; orange: visited</a><br><br>
+                            <div class="btndiv">
+                                <button class="buttoncards" data-toggle="modal" data-target="#modal3">Read More</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="quoteabout">
+            <div class="container">
+                <div class="quote">
+                    <img src="./images/Line 1 (1).png" alt="Icon">
+                    <p>"The A* algorithm, a versatile pathfinding method,
+                        intelligently navigates graphs by efficiently balancing the cost of reaching a goal with
+                        heuristic estimates, making it a cornerstone in optimizing routes for real-world applications,
+                        from robotics to logistics."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="steps-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="steps-title">Steps of A* Path Planning Algorithm</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Add start node to the list</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">For all the neighboring nodes, find the least cost F node</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Switch to the closed list</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-text">For 8 nodes adjacent to the current node</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-text">If the node is not reachable, ignore it. Else, if the node is not on
+                                the open list, move it to the open list and calculate f, g, h.</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-text">If the node is on the open list, check if the path it offers is less
+                                than the current path and change to it if it does so.</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">7</div>
+                            <div class="step-text">Stop working when: You find the destination or You cannot find the
+                                destination going through all possible points.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">A* algorithm in navigation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="./images/A__Search_Example_on_North_American_Freight_Train_Network.gif"
+                                style="width: 100%; height: 350px; object-fit: cover;">
+                        </div>
+                        <div class="col-6 navigationabout">
+                            <p>The A* algorithm, celebrated for its capacity to identify optimal routes,
+                                transcends theoretical boundaries to find valuable applications in the real world.
+                                In a practical scenario, the algorithm's edges represent railroads, and its heuristic
+                                function (h(x)) calculates the great-circle distance, the shortest path on a sphere, to
+                                the target.
+                                Take, for instance, the task of determining the most efficient route between Washington,
+                                D.C., and Los Angeles.
+                                As the A* algorithm navigates through this network of railroads, its adaptability and
+                                efficiency shine, showcasing
+                                its prowess in addressing intricate routing challenges within the realm of real-world
+                                logistics and transportation planning.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="modal2">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">A* algorithm in navigation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="./images/Astar_progress_animation.gif"
+                                style="width: 100%; height: 350px; object-fit: cover;">
+                        </div>
+                        <div class="col-6 navigationabout">
+                            <p>Illustration of A* search algorithm. The graph is created by uniform square
+                                discretization
+                                of a 2-dimensional planar region, placing a node in each discretized cell, and
+                                connecting each node with
+                                its 8 neighbors using bidirectional edges. Cost of edges are same as their Euclidean
+                                lengths. The gray shape represents an obstacle.
+                                The filled circles in red & green represent expanded nodes (nodes in closed set). The
+                                color indicate the g-value (red:lower g-value,
+                                green: higher g-value). The empty nodes with blue boundary are the ones in open set. The
+                                nodes of the graph are generated on the fly,
+                                and nodes falling inside the obstacle are discarded as inaccessible. The objective is to
+                                find the least cost path (restricted to the graph)
+                                from a given start to a given goal coordinate. The heuristic (consistent) used by a node
+                                is its Euclidean distance to goal. That is, ha(n) = |g - n|2,
+                                where n represents the Euclidean coordinate of the
+                                node n, g is the goal node, and | . |2 is the 2-norm. This is a typical example of
+                                motion planning in robotics using A* search algorithm.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal" tabindex="-1" id="modal3">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">A* algorithm in navigation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="./images/AstarExampleEn.gif"
+                                style="width: 100%; height: 350px; object-fit: cover;">
+                        </div>
+                        <div class="col-6 navigationabout">
+                            <p>In this example of the A* algorithm in action,
+                                cities are depicted as nodes connected by roads, forming a graph for route exploration.
+                                The green node represents the starting city, the blue node denotes the target city, and
+                                the orange nodes highlight
+                                the cities visited during the algorithm's execution. The heuristic function, measuring
+                                the straight-line distance to the target point,
+                                guides the algorithm in dynamically and intelligently navigating the graph to find the
+                                optimal path from the starting city to the target city.
+                                This visual representation captures the A* algorithm's efficiency in solving routing
+                                problems within a single graph.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+        <div class="shortsection">
+            <div class="container">
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <h3>A* Robot Path Planning</h3>
+            <p>All Rights Reserved</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin black-icon"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook black-icon"></i></a>
+                <a href="https://github.com/Fortesacena/Robot_Path_Finding" target="_blank"><i class="fab fa-github black-icon"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="./scripts/about.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
