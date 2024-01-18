@@ -16,7 +16,7 @@ The project adopts an agile approach, specifically utilizing the Scrum framework
 To view and track our project progress, please visit our Jira board: https://robotpathfinding.atlassian.net/jira/software/projects/RPP/boards/1/backlog
 
 ## Deployment
-The application is deployed and can be accessed through the following link: https://deploy-preview-76--teal-gumdrop-4dbecf.netlify.app/
+The application is deployed and can be accessed through the following link: https://astounding-meringue-4f71c9.netlify.app/
 
 ## Problem Description
 The task involves solving the path planning problem for a robot navigating through obstacles in a given environment. The problem statement includes:
