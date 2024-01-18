@@ -24,6 +24,11 @@ $(function() {
         grid.initialize();
     });
 
+    $selectWallFrequency.change(function() {
+        grid.setOption({wallFrequency: $(this).val()});
+        grid.initialize();
+    });
+
     $selectGridSize.change(function() {
         grid.setOption({gridSize: $(this).val()});
         grid.initialize();
