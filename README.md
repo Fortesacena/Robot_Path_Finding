@@ -15,6 +15,9 @@ The project adopts an agile approach, specifically utilizing the Scrum framework
 ## Jira Board
 To view and track our project progress, please visit our Jira board: https://robotpathfinding.atlassian.net/jira/software/projects/RPP/boards/1/backlog
 
+## Figma
+This project has been meticulously designed using Figma. The Figma design files provide a comprehensive view of the project's user interface, components, and overall aesthetics. Explore the project's design in Figma: https://www.figma.com/community/file/1329530578520252495
+
 ## Deployment
 The application is deployed and can be accessed through the following link: https://deploy-preview-76--teal-gumdrop-4dbecf.netlify.app/
 
